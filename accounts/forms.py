@@ -10,3 +10,8 @@ class SignUpForm(forms.Form):
         required=True,
         error_messages={'required': 'You must accept the terms to proceed.'}
     )
+
+
+class DetailsForm(forms.Form): 
+    birth_date = forms.DateField(label="Date of Birth")
+    pass
