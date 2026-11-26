@@ -10,6 +10,7 @@ class Tag(models.Model):
 
 
 class User(AbstractUser): 
+    name = models.TextField(max_length=80)
     email = models.EmailField(unique=True)
     bio = models.TextField(max_length=300, blank=True)
     tags = models.ManyToManyField(Tag, blank=True, related_name="users")
